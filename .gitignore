@@ -15,3 +15,4 @@ resources/metadata_process_scripts/sources/dataset_dir.txt
 /resources/metadata_process_scripts/sources/list_of_datasets.csv
 /resources/metadata_process_scripts/sources/dataset_dir_mapping.csv
 /resources/metadata_process_scripts/sources/dataset-download-request-sample.json
+/resources/metadata_process_scripts/filter_DiversityOne.py

@@ -403,10 +403,10 @@ def main(excel_path, output_dir):
 
 if __name__ == "__main__":
     # Folder containing the Markdown files
-    excel_path = "/Users/munkhdelger/Knowdive/LivePeople/resources/metadata_process_scripts/sources/catalog.xlsx"
+    excel_path = "/Users/munkhdelger/Knowdive/LivePeople-ws/resources/metadata_process_scripts/sources/catalog.xlsx"
 
     # Output path
-    output_dir = "/Users/munkhdelger/Knowdive/LivePeople/_datasets"
+    output_dir = "/Users/munkhdelger/Knowdive/LivePeople-ws/_datasets"
     # output_dir = "/Users/munkhdelger/Knowdive/LivePeople/resources/metadata_process_scripts/md_new"
 
     main(excel_path, output_dir)
