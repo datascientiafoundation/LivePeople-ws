@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-London" target="_blank">2020-DiversityOne-London</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-London" target="_blank">2020-DiversityOne-London</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/ff8fb8d9-ecfd-4c39-bc09-c80eb4d90399" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data
@@ -83,5 +83,5 @@ location_facet: United Kingdom
 collection_name: DiversityOne
 data_type_facet: Diachronic-Interactions
 category: Dataset Bundle
-component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-London-Time%20Diaries" target="_blank">Time diaries</a>
+component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-London-Time%20Diaries" target="_blank">Time diaries</a>
 ---

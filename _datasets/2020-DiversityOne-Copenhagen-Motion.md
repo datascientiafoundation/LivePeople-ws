@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen" target="_blank">2020-DiversityOne-Copenhagen</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen" target="_blank">2020-DiversityOne-Copenhagen</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/3720e313-356e-4b7c-830e-be5cc7dbb3b3" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data
@@ -83,5 +83,5 @@ location_facet: Denmark
 collection_name: DiversityOne
 data_type_facet: Motion
 category: Dataset Bundle
-component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Accelerometer" target="_blank">Accelerometer</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Activities" target="_blank">Activities</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Gyroscope" target="_blank">Gyroscope</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Step%20Counter" target="_blank">Step counter</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Step%20Detector" target="_blank">Step detector</a>
+component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Accelerometer" target="_blank">Accelerometer</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Activities" target="_blank">Activities</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Gyroscope" target="_blank">Gyroscope</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Step%20Counter" target="_blank">Step counter</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Step%20Detector" target="_blank">Step detector</a>
 ---

@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Amrita" target="_blank">2020-DiversityOne-Amrita</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Amrita" target="_blank">2020-DiversityOne-Amrita</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/2c45f74f-6538-4bb5-a67e-1e9c15d0307c" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data
@@ -83,5 +83,5 @@ location_facet: India
 collection_name: DiversityOne
 data_type_facet: Synchronic-Interactions
 category: Dataset Bundle
-component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Amrita-Questionnaire%20Part%201" target="_blank">Questionnaire part 1</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Amrita-Questionnaire%20Part%202" target="_blank">Questionnaire part 2</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Amrita-Questionnaire%20Part%203" target="_blank">Questionnaire part 3</a>
+component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Amrita-Questionnaire%20Part%201" target="_blank">Questionnaire part 1</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Amrita-Questionnaire%20Part%202" target="_blank">Questionnaire part 2</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Amrita-Questionnaire%20Part%203" target="_blank">Questionnaire part 3</a>
 ---

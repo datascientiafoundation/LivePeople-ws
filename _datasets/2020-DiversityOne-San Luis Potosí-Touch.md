@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD" target="_blank">2020-DiversityOne-San Luis Potosí</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD" target="_blank">2020-DiversityOne-San Luis Potosí</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/0dcf26af-cb8f-4f61-b0c5-802a1a1febbd" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data

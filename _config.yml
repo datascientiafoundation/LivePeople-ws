@@ -1,7 +1,7 @@
 title: LivePeople
 greeting: LivePeople Catalog 
 description: The Livepeople Catalogue provides datasets about the diversity of people, considering their daily behaviors, habits and lifestyles. The datasets are collected over time with different methodologies, ranging from behavioral studies and ecological momentary assessment to citizen social sciences approaches, and they were produced by multiple projects involving partners from around the world. Given the sensitive content of the datasets, these are made available upon request and user license.
-baseurl: /LivePeople
+baseurl: /LivePeople-ws
 logo: /img/LP.png
 
 # Site theme

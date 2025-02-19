@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD" target="_blank">2020-DiversityOne-San Luis Potosí</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD" target="_blank">2020-DiversityOne-San Luis Potosí</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/0dcf26af-cb8f-4f61-b0c5-802a1a1febbd" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data
@@ -83,5 +83,5 @@ location_facet: Mexico
 collection_name: DiversityOne
 data_type_facet: Daily annotations & Location
 category: Dataset Bundle
-component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD-Location%20RD" target="_blank">Location rd</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD-Time%20Diaries" target="_blank">Time diaries</a>
+component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD-Location%20RD" target="_blank">Location rd</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-San%20Luis%20Potos%C3%AD-Time%20Diaries" target="_blank">Time diaries</a>
 ---

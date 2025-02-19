@@ -31,13 +31,13 @@ def encode_url(title):
 
 
 def create_href(title):
-    base_url = "https://datascientiafoundation.github.io/LivePeople/datasets/"
+    base_url = "https://datascientiafoundation.github.io/LivePeople-ws/datasets/"
     link = base_url + encode_url(title)
     return f'<a href="{link}" target="_blank">{title}</a>'
 
 
 def generate_html_href(category, row, all_df):
-    base_url = "https://datascientiafoundation.github.io/LivePeople/datasets/"
+    base_url = "https://datascientiafoundation.github.io/LivePeople-ws/datasets/"
     generated_href = []
 
 

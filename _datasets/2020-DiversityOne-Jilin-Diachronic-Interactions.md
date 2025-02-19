@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Jilin" target="_blank">2020-DiversityOne-Jilin</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Jilin" target="_blank">2020-DiversityOne-Jilin</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/923b2c1c-166c-4f53-a274-c9d6eaa5ad4f" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data
@@ -83,5 +83,5 @@ location_facet: China
 collection_name: DiversityOne
 data_type_facet: Diachronic-Interactions
 category: Dataset Bundle
-component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Jilin-Time%20Diaries" target="_blank">Time diaries</a>
+component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Jilin-Time%20Diaries" target="_blank">Time diaries</a>
 ---

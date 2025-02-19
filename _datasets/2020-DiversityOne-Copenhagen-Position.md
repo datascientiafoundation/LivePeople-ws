@@ -1,6 +1,6 @@
 ---
 schema: default
-ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen" target="_blank">2020-DiversityOne-Copenhagen</a>
+ds:prjTitle: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen" target="_blank">2020-DiversityOne-Copenhagen</a>
 ds:prjURL: <a href="https://ds.datascientia.eu/community/public/projects/3720e313-356e-4b7c-830e-be5cc7dbb3b3" target="_blank"> View </a>
 ds:prjWebpage: <a href="https://datascientia.disi.unitn.it/projects/diversityone/" target="_blank"> View </a>
 ds:prjKeywords: Diversity, Social Practices, Lifestyle, Smartphone data, Sensor data
@@ -83,5 +83,5 @@ location_facet: Denmark
 collection_name: DiversityOne
 data_type_facet: Position
 category: Dataset Bundle
-component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Location%20POI" target="_blank">Location poi</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Location%20RD" target="_blank">Location rd</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Magnetic%20Field" target="_blank">Magnetic field</a>, <a href="https://datascientiafoundation.github.io/LivePeople/datasets/2020-DiversityOne-Copenhagen-Proximity" target="_blank">Proximity</a>
+component_dataset_link: <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Location%20POI" target="_blank">Location poi</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Location%20RD" target="_blank">Location rd</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Magnetic%20Field" target="_blank">Magnetic field</a>, <a href="https://datascientiafoundation.github.io/LivePeople-ws/datasets/2020-DiversityOne-Copenhagen-Proximity" target="_blank">Proximity</a>
 ---
