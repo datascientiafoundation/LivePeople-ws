@@ -174,9 +174,9 @@ dataset_fields:
     label: Dataset Description
     datajson: ds:DatDescription
 
-  - field_name: ds:prjTitle
-    label: Project Title
-    datajson: ds:prjTitle
+#  - field_name: ds:prjTitle
+#    label: Project Title
+#    datajson: ds:prjTitle
 
   - field_name: ds:DatSensorName
     label: Sensor Name
