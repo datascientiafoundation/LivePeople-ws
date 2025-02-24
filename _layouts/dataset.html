@@ -59,7 +59,7 @@ layout: default
                             {% for resource in page.resources %}
                             {% if resource.name and resource.url %}
                             <li data-hook="resource-item" property="dcat:distribution" typeof="dcat:Distribution">
-                                <a href="{{ resource.url }}" property="dcat:accessURL">
+                                <a href="{{ resource.url }}" property="dcat:accessURL" target="_blank">
                                     <span property="dct:title">{{ resource.name }}</span>
                                 </a>
                                 {% if resource.format %}

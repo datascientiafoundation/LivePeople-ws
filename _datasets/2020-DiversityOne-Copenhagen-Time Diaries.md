@@ -34,9 +34,9 @@ resources:
   - name: Dataset paper and data collection methodology
     url: https://arxiv.org/abs/2502.03347
     format: PDF
-  - name: 
-    url: 
-    format: 
+  - name: Codebook
+    url: https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020-DV1-Copenhagen_timediary.html
+    format: html
   - name: 
     url: 
     format: 

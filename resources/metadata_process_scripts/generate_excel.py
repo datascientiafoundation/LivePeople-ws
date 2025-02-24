@@ -694,24 +694,67 @@ def get_missing_codebooks(df):
         "locationeventpertime_rd.html": "2021-ChatApplication2-locationeventpertime_rd.html"
     }
 
-    base_url = 'https://datascientiafoundation.github.io/LivePeople-Documentation/2021-ChatApplication2/'
-
+    base_url = 'https://datascientiafoundation.github.io/LivePeople-Documentation'
     def generate_codebook_url(row):
+
         if row['codebook-url'].startswith('https://drive.google.com') and row['collection_name'] != 'SmartUnitn2':
-            return base_url + sensors.get(row['codebook-name'], 'default.html')
+            return base_url + '/2021-ChatApplication2/' + sensors.get(row['codebook-name'], 'default.html')
         return row['codebook-url']
 
     df['codebook-url'] = df.apply(generate_codebook_url, axis=1)
 
     def update_codebook_url(row):
         if row['title'] == '2020-DiversityOne-San Luis Potosí-Gyroscope':
-            row[
-                'codebook-url'] = 'https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020_DV1_San-Luis-Potosi_gyroscope.html'
+            row['codebook-url'] = base_url + '/codebooks/2020_DV1_San-Luis-Potosi_gyroscope.html'
             row['codebook-name'] = 'Codebook'
             row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-Amrita-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-Amrita_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-Asunción-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-Asuncion_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-Copenhagen-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-Copenhagen_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-Jilin-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-Jilin_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-London-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-London_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-San Luis Potosí-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-San_Luis_potosi_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-Trento-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-Trento_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
+        if row['title'] == '2020-DiversityOne-Ulaanbaatar-Time Diaries':
+            row['codebook-url'] = base_url + '/codebooks/' + '2020-DV1-Ulan_Bator_timediary.html'
+            row['codebook-name'] = 'Codebook'
+            row['codebook-format'] = 'html'
+
         return row
 
     df = df.apply(update_codebook_url, axis=1)
+
+
+
 
     return df
 
