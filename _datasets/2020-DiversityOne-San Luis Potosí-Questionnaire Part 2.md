@@ -34,11 +34,11 @@ resources:
   - name: Dataset paper and data collection methodology
     url: https://arxiv.org/abs/2502.03347
     format: PDF
-  - name: 
-    url: 
-    format: 
+  - name: Codebook
+    url: https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020_DV1_San-Luis-Potosi_survey2.html
+    format: html
   - name: Additional_material-questionnaire
-    url: https://drive.google.com/file/d/16loX2mvErVw_fzrBAYLX3uIwc_3FrwrA/view?usp=drive_link
+    url: https://drive.google.com/file/d/1jhkBFcruJil2f09xV1dYpjgQL-yqcbaj/view?usp=drive_link
     format: PDF
 download request:
   - name: Download request

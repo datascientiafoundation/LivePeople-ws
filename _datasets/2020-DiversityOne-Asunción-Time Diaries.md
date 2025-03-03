@@ -35,7 +35,7 @@ resources:
     url: https://arxiv.org/abs/2502.03347
     format: PDF
   - name: Codebook
-    url: https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020-DV1-Asuncion_timediary.html
+    url: https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020_DV1_Asuncion_timediaries.html
     format: html
   - name: 
     url: 
