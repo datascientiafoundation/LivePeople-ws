@@ -41,9 +41,9 @@ resources:
     url: 
     format: 
 download request:
-  - name: Download request
-    url: https://datascientiafoundation.github.io/LivePeople/resources/download_request.pdf
-    format: PDF
+  - name: 
+    url: 
+    url: 
 title: 2020-DiversityOne-Asunción-Step Detector
 notes: This dataset exploits the Android API that counts (incrementally) the number of steps since the devices booted. The step detector sensor collects an event each time a step is taken by the user. The value reported by the sensor is always one, the fractional part being always zero, and the event timestamp is the time when the user’s foot hit the ground. It is part of Wenet Diversity 1 data collection, which contains data about the everyday life activities of students coming from 8 different universities located in China, Denmark, India, Italy, Mexico, Mongolia, Paraguay and UK. The data were collected via questionnaires, data coming from 26 smartphone sensors associated to thousand self-reported annotations over a period of 4 weeks.
 ds:DatVersion: 

@@ -117,15 +117,19 @@ layout: default
                         </ul>
                         {% endif %}
 
-
                         {% if page['download request'] %}
                         <h2>Download Request</h2>
                         <ul>
                             {% for request in page['download request'] %}
                             <li property='dcat:distribution' typeof='dcat:Distribution'>
+                                {% if request.url %}
                                 <a href="{{ request.url }}" property='dcat:accessURL' download>
                                     <span property="dct:title">{{ request.name }}</span>
                                 </a>
+                                {% else %}
+                                <span property="dct:title">Coming soon...</span>
+                                {% endif %}
+
                                 {% if request.format %}
                                 <span class="badge badge-secondary"
                                       property='dcat:mediaType'>{{ request.format }}</span>

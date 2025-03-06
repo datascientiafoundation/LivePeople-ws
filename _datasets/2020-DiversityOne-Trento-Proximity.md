@@ -41,9 +41,9 @@ resources:
     url: 
     format: 
 download request:
-  - name: Download request
-    url: https://datascientiafoundation.github.io/LivePeople/resources/download_request.pdf
-    format: PDF
+  - name: 
+    url: 
+    url: 
 title: 2020-DiversityOne-Trento-Proximity
 notes: The dataset contains the proximity events, which measure the distance between the user's head and the phone, depending on the phone it may be measured in centimeters (i.e., the absolute distance) or as labels (e.g., 'near', 'far'). It is part of Wenet Diversity 1 data collection, which contains data about the everyday life activities of students coming from 8 different universities located in China, Denmark, India, Italy, Mexico, Mongolia, Paraguay and UK. The data were collected via questionnaires, data coming from 26 smartphone sensors associated to thousand self-reported annotations over a period of 4 weeks.
 ds:DatVersion: 

@@ -41,9 +41,9 @@ resources:
     url: 
     format: 
 download request:
-  - name: Download request
-    url: https://datascientiafoundation.github.io/LivePeople/resources/download_request.pdf
-    format: PDF
+  - name: 
+    url: 
+    url: 
 title: 2020-DiversityOne-Trento-Magnetic Field
 notes: The dataset contains 3D vector of the magnetic field. It is part of Wenet Diversity 1 data collection, which contains data about the everyday life activities of students coming from 8 different universities located in China, Denmark, India, Italy, Mexico, Mongolia, Paraguay and UK. The data were collected via questionnaires, data coming from 26 smartphone sensors associated to thousand self-reported annotations over a period of 4 weeks.
 ds:DatVersion: 
