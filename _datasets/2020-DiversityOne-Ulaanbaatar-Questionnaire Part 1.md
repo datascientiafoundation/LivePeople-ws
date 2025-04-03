@@ -41,9 +41,12 @@ resources:
     url: https://drive.google.com/file/d/1fXlb2vJfp_HOs4XP_3jaLYM7rTipGygO/view?usp=drive_link
     format: PDF
 download request:
-  - name: 
-    url: 
-    url: 
+  - name: Web form
+    url: https://ds.datascientia.eu/marketplace/welcome
+    format: 
+  - name: Guidelines
+    url: https://ds.datascientia.eu/marketplace/public/data-access-policy
+    format: 
 title: 2020-DiversityOne-Ulaanbaatar-Questionnaire Part 1
 notes: The dataset contains profiling questions, e.g., demographics, routines, personality. It is part of Wenet Diversity 1 data collection, which contains data about the everyday life activities of students coming from 8 different universities located in China, Denmark, India, Italy, Mexico, Mongolia, Paraguay and UK. The data were collected via questionnaires, data coming from 26 smartphone sensors associated to thousand self-reported annotations over a period of 4 weeks.
 ds:DatVersion: 

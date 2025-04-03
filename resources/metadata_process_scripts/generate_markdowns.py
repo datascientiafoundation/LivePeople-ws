@@ -31,17 +31,14 @@ def encode_url(title):
 
 
 def create_href(title):
-    base_url = "https://datascientiafoundation.github.io/LivePeople-ws/datasets/"
+    base_url = "https://datascientiafoundation.github.io/LivePeople/datasets/"
     link = base_url + encode_url(title)
     return f'<a href="{link}" target="_blank">{title}</a>'
 
 
 def generate_html_href(category, row, all_df):
-    base_url = "https://datascientiafoundation.github.io/LivePeople-ws/datasets/"
+    base_url = "https://datascientiafoundation.github.io/LivePeople/datasets/"
     generated_href = []
-
-
-
 
     # TODO should get component datasets using identifier field
     if category == 'Project':  # Should contain Dataset Bundles
@@ -66,17 +63,18 @@ def generate_html_href(category, row, all_df):
 
         dataset_df = all_df['Dataset']
 
-
         if bundle_name == 'Daily annotations & Location RD':
-            titles = dataset_df[dataset_df['ds:DatName'].isin([f'{year_collection_city}-Location RD', f'{year_collection_city}-Time Diaries'])][
+            titles = dataset_df[dataset_df['ds:DatName'].isin(
+                [f'{year_collection_city}-Location RD', f'{year_collection_city}-Time Diaries'])][
                 'ds:DatName']
 
         elif bundle_name in ['Diachronic-Interactions', 'Synchronic-Interactions']:
             titles = dataset_df[(dataset_df['ds:DatName'].str.startswith(year_collection_city)) & (
-                        dataset_df['ds:DatType'] == bundle_name)]['ds:DatName']
+                    dataset_df['ds:DatType'] == bundle_name)]['ds:DatName']
 
         else:
-            titles = dataset_df[(dataset_df['ds:DatName'].str.startswith(year_collection_city)) & (dataset_df['ds:DatSensorType'] == bundle_name)][
+            titles = dataset_df[(dataset_df['ds:DatName'].str.startswith(year_collection_city)) & (
+                        dataset_df['ds:DatSensorType'] == bundle_name)][
                 'ds:DatName']
 
         for title in titles:
@@ -93,7 +91,7 @@ def create_project_md(df, all_df):
     df['ds:prjOverallParticipantsInvolved'] = pd.to_numeric(df['ds:prjOverallParticipantsInvolved'],
                                                             errors='coerce').fillna(0).astype(int)
     df['ds:prjSelectedParticipants'] = pd.to_numeric(df['ds:prjSelectedParticipants'],
-                                                            errors='coerce').fillna(0).astype(int)
+                                                     errors='coerce').fillna(0).astype(int)
     for index, row in df.iterrows():
         try:
             if not row['ds:prjIsVisible']:
@@ -106,9 +104,11 @@ def create_project_md(df, all_df):
             md_content = "---\n"
             md_content = md_content + "schema: default" + "\n"
             md_content = md_content + "title: " + row['ds:prjTitle'] + "\n"
-            md_content = md_content + "ds:prjURL: <a href=\"" + str(row['ds:prjURL']) + "\" target=\"_blank\"> View </a>\n"
+            md_content = md_content + "ds:prjURL: <a href=\"" + str(
+                row['ds:prjURL']) + "\" target=\"_blank\"> View </a>\n"
             if str(row['ds:prjWebpage']) != '':
-                md_content = md_content + "ds:prjWebpage: <a href=\"" + str(row['ds:prjWebpage']) + "\" target=\"_blank\"> View </a>\n"
+                md_content = md_content + "ds:prjWebpage: <a href=\"" + str(
+                    row['ds:prjWebpage']) + "\" target=\"_blank\"> View </a>\n"
             md_content = md_content + "ds:prjKeywords: " + str(row['ds:prjKeywords']) + "\n"
             md_content = md_content + "ds:prjType: " + str(row['ds:prjType']) + "\n"
             md_content = md_content + "notes: " + str(row['ds:prjDescription']) + "\n"
@@ -124,11 +124,13 @@ def create_project_md(df, all_df):
             md_content = md_content + "ds:prjMembers: " + str(row['ds:prjMembers']) + "\n"
             md_content = md_content + "ds:prjTargetLocation: " + str(row['ds:prjTargetLocation']) + "\n"
             md_content = md_content + "ds:prjTargetPopulation: " + str(row['ds:prjTargetPopulation']) + "\n"
-            md_content = md_content + "ds:prjOverallParticipantsInvolved: " + str(row['ds:prjOverallParticipantsInvolved']) + "\n"
+            md_content = md_content + "ds:prjOverallParticipantsInvolved: " + str(
+                row['ds:prjOverallParticipantsInvolved']) + "\n"
             md_content = md_content + "ds:prjSelectedParticipants: " + str(row['ds:prjSelectedParticipants']) + "\n"
             md_content = md_content + "ds:prjTypeOfMeasurements: " + str(row['ds:prjTypeOfMeasurements']) + "\n"
             md_content = md_content + "ds:prjIRBApprovalDate: " + str(row['ds:prjIRBApprovalDate']) + "\n"
-            md_content = md_content + "ds:prjIRBApprovalOrganization: " + str(row['ds:prjIRBApprovalOrganization']) + "\n"
+            md_content = md_content + "ds:prjIRBApprovalOrganization: " + str(
+                row['ds:prjIRBApprovalOrganization']) + "\n"
             md_content = md_content + "ds:prjIRBApprovalNumber: " + str(row['ds:prjIRBApprovalNumber']) + "\n"
             md_content = md_content + f'ds:prjCiteAs: "{str(row["ds:prjCiteAs"])}"\n'
             md_content = md_content + "ds:prjMaintenance: " + str(row['ds:prjMaintenance']) + "\n"
@@ -157,7 +159,7 @@ def create_project_md(df, all_df):
             md_content = md_content + "category: " + str(row['ds:prjCategoryFacet']) + "\n"
 
             # for viz
-            md_content = md_content + "component_dataset_link: " + generate_html_href('Project',row, all_df) + "\n"
+            md_content = md_content + "component_dataset_link: " + generate_html_href('Project', row, all_df) + "\n"
 
             md_content = md_content + "---\n"
 
@@ -165,10 +167,11 @@ def create_project_md(df, all_df):
 
             with open(output_file_path, 'w', encoding='utf-8') as md_file:
                 md_file.write(md_content)
-            cnt = cnt+1
+            cnt = cnt + 1
         except Exception as e:
             print(f"Error: {e}")
     print(f'total proj generated: {cnt}')
+
 
 def create_dataset_md(df, all_df):
     # df = df.fillna('')
@@ -181,30 +184,28 @@ def create_dataset_md(df, all_df):
                 skipped = skipped + 1
                 continue
 
-
             file_name = row['ds:DatName'] + '.md'
 
-            for key in ["ds:DatPublicationTimestamp", "ds:DatExpires", "ds:DatStartDate", "ds:DatEndDate", "ds:DatUpdateTimestamp"]:
+            for key in ["ds:DatPublicationTimestamp", "ds:DatExpires", "ds:DatStartDate", "ds:DatEndDate",
+                        "ds:DatUpdateTimestamp"]:
                 row[key] = convert_datetime_formats(row[key])
-
 
             project_title = '-'.join(row['ds:DatName'].split('-')[0:3])
             project_df = all_df['Project']
 
-            project_df['ds:prjOverallParticipantsInvolved'] = pd.to_numeric(project_df['ds:prjOverallParticipantsInvolved'],
-                                                                    errors='coerce').fillna(0).astype(int)
+            project_df['ds:prjOverallParticipantsInvolved'] = pd.to_numeric(
+                project_df['ds:prjOverallParticipantsInvolved'],
+                errors='coerce').fillna(0).astype(int)
             project_df['ds:prjSelectedParticipants'] = pd.to_numeric(project_df['ds:prjSelectedParticipants'],
-                                                             errors='coerce').fillna(0).astype(int)
+                                                                     errors='coerce').fillna(0).astype(int)
 
-
-            filtered_df =project_df[project_df['ds:prjTitle'] == project_title]
+            filtered_df = project_df[project_df['ds:prjTitle'] == project_title]
             if filtered_df.empty:
                 print(f"No project named: {project_title}")
-                project_row = pd.Series({col: float('nan') for col in project_df.columns}) #for the code to run with empty project row values
+                project_row = pd.Series({col: float('nan') for col in
+                                         project_df.columns})  # for the code to run with empty project row values
             else:
                 project_row = filtered_df.iloc[0]
-
-
 
             project_row = project_row.fillna('')
             row = row.fillna('')
@@ -212,14 +213,15 @@ def create_dataset_md(df, all_df):
             for key in ["ds:prjStartDate", "ds:prjEndDate", "ds:prjIRBApprovalDate"]:
                 project_row[key] = convert_datetime_formats(project_row[key])
 
-
             md_content = "---\n"
 
             md_content = md_content + "schema: default" + "\n"
-            md_content = md_content + "ds:prjTitle: " + create_href(project_row['ds:prjTitle']) + "\n" # --> for viz
-            md_content = md_content + "ds:prjURL: <a href=\"" + str(project_row['ds:prjURL']) + "\" target=\"_blank\"> View </a>\n"
+            md_content = md_content + "ds:prjTitle: " + create_href(project_row['ds:prjTitle']) + "\n"  # --> for viz
+            md_content = md_content + "ds:prjURL: <a href=\"" + str(
+                project_row['ds:prjURL']) + "\" target=\"_blank\"> View </a>\n"
             if str(project_row['ds:prjWebpage']) != '':
-                md_content = md_content + "ds:prjWebpage: <a href=\"" + str(project_row['ds:prjWebpage']) + "\" target=\"_blank\"> View </a>\n"
+                md_content = md_content + "ds:prjWebpage: <a href=\"" + str(
+                    project_row['ds:prjWebpage']) + "\" target=\"_blank\"> View </a>\n"
             md_content = md_content + "ds:prjKeywords: " + str(project_row['ds:prjKeywords']) + "\n"
             md_content = md_content + "ds:prjType: " + str(project_row['ds:prjType']) + "\n"
             # md_content = md_content + "notes: " + str(project_row['ds:prjDescription']) + "\n"
@@ -237,7 +239,8 @@ def create_dataset_md(df, all_df):
             md_content = md_content + "ds:prjTargetPopulation: " + str(project_row['ds:prjTargetPopulation']) + "\n"
             md_content = md_content + "ds:prjOverallParticipantsInvolved: " + str(
                 project_row['ds:prjOverallParticipantsInvolved']) + "\n"
-            md_content = md_content + "ds:prjSelectedParticipants: " + str(project_row['ds:prjSelectedParticipants']) + "\n"
+            md_content = md_content + "ds:prjSelectedParticipants: " + str(
+                project_row['ds:prjSelectedParticipants']) + "\n"
             md_content = md_content + "ds:prjTypeOfMeasurements: " + str(project_row['ds:prjTypeOfMeasurements']) + "\n"
             md_content = md_content + "ds:prjIRBApprovalDate: " + str(project_row['ds:prjIRBApprovalDate']) + "\n"
             md_content = md_content + "ds:prjIRBApprovalOrganization: " + str(
@@ -249,7 +252,8 @@ def create_dataset_md(df, all_df):
             md_content = md_content + "longitude_map: " + str(project_row['ds:prjLongitude']) + "\n"
             md_content = md_content + "ds:prjThumbnailURL: " + str(project_row['ds:prjThumbnailURL']) + "\n"
             md_content = md_content + "ds:prjIdentifier: " + str(project_row['ds:prjIdentifier']) + "\n"
-            md_content = md_content + "ds:prjDownloadRequestEmail: " + str(project_row['ds:prjDownloadRequestEmail']) + "\n"
+            md_content = md_content + "ds:prjDownloadRequestEmail: " + str(
+                project_row['ds:prjDownloadRequestEmail']) + "\n"
 
             md_content = md_content + "resources:\n"
 
@@ -271,8 +275,6 @@ def create_dataset_md(df, all_df):
                     md_content = md_content + "  - name: " + str(row['ds:DatAdditionalMaterialName']) + "\n"
                     md_content = md_content + "    url: " + str(row['ds:DatAdditionalMaterialURL']) + "\n"
                     md_content = md_content + "    format: " + str(row['ds:DatAdditionalMaterialFormat']) + "\n"
-
-
             else:
                 if str(project_row['ds:prjDocumentationName']) != "nan":
                     md_content = md_content + "  - name: " + str(project_row['ds:prjDocumentationName']) + "\n"
@@ -294,9 +296,22 @@ def create_dataset_md(df, all_df):
 
             md_content = md_content + "download request:\n"
             if str(row['ds:DatDownloadRequestName']) != "nan":
-                md_content = md_content + "  - name: " + str(row['ds:DatDownloadRequestName']) + "\n"
-                md_content = md_content + "    url: " + str(row['ds:DatDownloadRequestURL']) + "\n"
-                md_content = md_content + "    format: " + str(row['ds:DatDownloadRequestFormat']) + "\n"
+                if str(project_row['ds:prjCollectionFacet']) == 'DiversityOne':
+                    md_content = md_content + "  - name: " + str(row['ds:DatDownloadRequestName']) + "\n"
+                    md_content = md_content + "    url: " + str(row['ds:DatDownloadRequestURL']) + "\n"
+                    md_content = md_content + "    format: " + str(row['ds:DatDownloadRequestFormat']) + "\n"
+
+                    #guidelines
+                    md_content = md_content + "  - name: " + "Guidelines" + "\n"
+                    md_content = md_content + "    url: " + "https://ds.datascientia.eu/marketplace/public/data-access-policy" + "\n"
+                    md_content = md_content + "    format: " + "" + "\n"
+
+
+                else:
+                    md_content = md_content + "  - name: " + "" + "\n"
+                    md_content = md_content + "    url: " + "" + "\n"
+                    md_content = md_content + "    url: " + "" + "\n"
+
 
 
             md_content = md_content + "title: " + str(row['ds:DatName']) + "\n"
@@ -324,7 +339,7 @@ def create_dataset_md(df, all_df):
                 md_content = md_content + "ds:DatSensorName: " + str(row['ds:DatSensorName']) + "\n"
             md_content = md_content + "ds:DatType: " + str(row['ds:DatType']) + "\n"
             if str(row['ds:DatCategoryFacet']) == "Dataset":
-                md_content = md_content + "ds:DatSensorType: " +"\n  - " + str(row['ds:DatSensorType']) + "\n"
+                md_content = md_content + "ds:DatSensorType: " + "\n  - " + str(row['ds:DatSensorType']) + "\n"
             md_content = md_content + f'ds:DatStartDate: "{str(row["ds:DatStartDate"])}"\n'
             md_content = md_content + f'ds:DatEndDate: "{str(row["ds:DatEndDate"])}"\n'
             md_content = md_content + "ds:DatFiveStars: " + str(row['ds:DatFiveStars']) + "\n"
@@ -336,8 +351,6 @@ def create_dataset_md(df, all_df):
             md_content = md_content + "ds:DatSha256: " + str(row['ds:DatSha256']) + "\n"
             md_content = md_content + "ds:DatUpdateTimestamp: " + str(row['ds:DatUpdateTimestamp']) + "\n"
             md_content = md_content + "ds:DatBasedOn: " + str(row['ds:DatBasedOn']) + "\n"
-
-
 
             # md_content = md_content + "resources:\n"
             # if str(row['ds:DatCodebookName']) != "nan":
@@ -355,10 +368,10 @@ def create_dataset_md(df, all_df):
             md_content = md_content + "data_type_facet: " + str(row['ds:DataTypeFacet']) + "\n"
             md_content = md_content + "category: " + str(row['ds:DatCategoryFacet']) + "\n"
 
-
             # for viz
             if str(row['ds:DatCategoryFacet']) == "Dataset Bundle":
-                md_content = md_content + "component_dataset_link: " + generate_html_href('Dataset Bundle', row, all_df) + "\n"
+                md_content = md_content + "component_dataset_link: " + generate_html_href('Dataset Bundle', row,
+                                                                                          all_df) + "\n"
 
             md_content = md_content + "---\n"
 
@@ -366,11 +379,12 @@ def create_dataset_md(df, all_df):
 
             with open(output_file_path, 'w', encoding='utf-8') as md_file:
                 md_file.write(md_content)
-                cnt = cnt +1 
+                cnt = cnt + 1
         except Exception as e:
             print(f"Error processing file {file_name}: {e}")
 
     print(f'total # generated md: {cnt}, with skipped: {skipped}')
+
 
 def main(excel_path, output_dir):
     # step 1. get fields to generate project/dataset/dataset bundle
@@ -385,8 +399,6 @@ def main(excel_path, output_dir):
     # Ensure output directory exists
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-
-
 
     # project
     try:
@@ -403,10 +415,10 @@ def main(excel_path, output_dir):
 
 if __name__ == "__main__":
     # Folder containing the Markdown files
-    excel_path = "/Users/munkhdelger/Knowdive/LivePeople-ws/resources/metadata_process_scripts/sources/catalog.xlsx"
+    excel_path = "/Users/munkhdelger/Knowdive/LivePeople/resources/metadata_process_scripts/sources/catalog.xlsx"
 
     # Output path
-    output_dir = "/Users/munkhdelger/Knowdive/LivePeople-ws/_datasets"
+    output_dir = "/Users/munkhdelger/Knowdive/LivePeople/_datasets"
     # output_dir = "/Users/munkhdelger/Knowdive/LivePeople/resources/metadata_process_scripts/md_new"
 
     main(excel_path, output_dir)

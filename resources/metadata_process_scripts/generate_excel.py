@@ -944,10 +944,10 @@ def main(md_files_pattern, project_file, metadata_description, output_file):
     data = get_project_info(data, df_project)
 
     # custom
-    data['ds:DatDownloadRequestName'] = 'Download request'
+    data['ds:DatDownloadRequestName'] = 'Web form'
     data[
-        'ds:DatDownloadRequestURL'] = 'https://datascientiafoundation.github.io/LivePeople/resources/download_request.pdf'
-    data['ds:DatDownloadRequestFormat'] = 'PDF'
+        'ds:DatDownloadRequestURL'] = 'https://ds.datascientia.eu/marketplace/welcome'
+    data['ds:DatDownloadRequestFormat'] = ''
 
     data['ds:prjIsVisible'] = True
     data['ds:DatIsVisible'] = True

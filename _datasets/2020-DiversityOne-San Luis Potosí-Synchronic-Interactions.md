@@ -41,9 +41,12 @@ resources:
     url: 
     format: 
 download request:
-  - name: 
-    url: 
-    url: 
+  - name: Web form
+    url: https://ds.datascientia.eu/marketplace/welcome
+    format: 
+  - name: Guidelines
+    url: https://ds.datascientia.eu/marketplace/public/data-access-policy
+    format: 
 title: 2020-DiversityOne-San Luis Potosí-Synchronic-Interactions
 notes: The study aimed to assess diversity through the social practices and daily behaviors of university students from eight different countries. The research was carried out in two phases. Initially, a large sample of students from Denmark, Italy, Mongolia, Paraguay, the United Kingdom, China, Mexico, and India, completed a survey on their social practices, as well as their socio-demographic, cultural, and psychological elements. In the second phase, a sub-sample of the respondents engaged in a four-week data collection by using an innovative smartphone application called iLog. This app collected data from thirty-four smartphone sensors around the clock, allowing for an in-depth investigation into the diversity and daily routines of university students across countries, both synchronically and diachronically.
 ds:DatVersion: 
