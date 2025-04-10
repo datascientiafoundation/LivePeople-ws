@@ -29,14 +29,14 @@ latitude_map: 47.92
 longitude_map: 106.9
 ds:prjThumbnailURL: 
 ds:prjIdentifier: 004.AAAD.AAB.**
-ds:prjDownloadRequestEmail: datadistribution.knowdive@unitn.it
+ds:prjDownloadRequestEmail: 
 resources:
   - name: Dataset paper and data collection methodology
     url: https://arxiv.org/abs/2502.03347
     format: PDF
-  - name: 
-    url: 
-    format: 
+  - name: Codebook
+    url: https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020_DV1_Ulan-Bator_airplane.html
+    format: html
   - name: 
     url: 
     format: 

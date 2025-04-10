@@ -29,14 +29,14 @@ latitude_map: 43.83
 longitude_map: 126.5
 ds:prjThumbnailURL: 
 ds:prjIdentifier: 004.AAAD.AAF.**
-ds:prjDownloadRequestEmail: datadistribution.knowdive@unitn.it
+ds:prjDownloadRequestEmail: 
 resources:
   - name: Dataset paper and data collection methodology
     url: https://arxiv.org/abs/2502.03347
     format: PDF
-  - name: 
-    url: 
-    format: 
+  - name: Codebook
+    url: https://datascientiafoundation.github.io/LivePeople-Documentation/codebooks/2020_DV1_Jilin_magneticfield.html
+    format: html
   - name: 
     url: 
     format: 

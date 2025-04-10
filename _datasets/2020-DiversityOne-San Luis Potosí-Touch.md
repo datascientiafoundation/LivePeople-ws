@@ -29,7 +29,7 @@ latitude_map: 22.15
 longitude_map: -100.9
 ds:prjThumbnailURL: 
 ds:prjIdentifier: 004.AAAD.AAH.**
-ds:prjDownloadRequestEmail: datadistribution.knowdive@unitn.it
+ds:prjDownloadRequestEmail: 
 resources:
   - name: Dataset paper and data collection methodology
     url: https://arxiv.org/abs/2502.03347
