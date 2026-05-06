@@ -32,7 +32,7 @@ ds:prjIdentifier: 004.AAAD.AAD.**
 ds:prjDownloadRequestEmail: 
 resources:
   - name: Dataset paper and data collection methodology
-    url: https://arxiv.org/abs/2502.03347
+    url: https://dl.acm.org/doi/pdf/10.1145/3712289
     format: PDF
   - name: 
     url: 

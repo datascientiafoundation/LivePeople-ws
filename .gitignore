@@ -5,6 +5,7 @@ _config.dev.yml
 node_modules
 *.map
 .idea
+__pycache__
 resources/metadata_process_scripts/__pycache__/modeling.cpython-38.pyc
 /resources/metadata_process_scripts/_datasets_arch(24012025)
 /resources/metadata_process_scripts/md_new

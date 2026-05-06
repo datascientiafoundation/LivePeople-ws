@@ -1020,6 +1020,14 @@ def main(md_files_pattern, project_file, metadata_description, output_file):
                                              ''), 'ds:DatAdditionalMaterialURL'] = 'https://drive.google.com/file/d/1bOYnYNkhHjpRO1WW0e2yDCSrKd4KwA-s/view?usp=drive_link'
     data.loc[data['ds:DatName'].str.endswith('Part 3', ''), 'ds:DatAdditionalMaterialFormat'] = 'PDF'
 
+
+    # Remove tech report from mak
+
+    data.loc[data['collection_name'] == 'Makerere', ['ds:prjDocumentationName', 'ds:prjDocumentationURL',
+                                                     'ds:prjDocumentationFormat']] = ""
+
+
+
     # Save the extracted data to an Excel file
 
     data = data.sort_values('title')

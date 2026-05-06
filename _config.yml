@@ -24,8 +24,9 @@ navigation:
     url: /organizations/
   - title: Services
     url: /#services
-  - title: FAQ
-    url: /faq/
+  - title: Docs
+    url: https://datascientiafoundation.github.io/docs/LivePeople/intro
+    external: true
 
 # Collections
 collections:

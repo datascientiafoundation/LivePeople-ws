@@ -44,5 +44,43 @@ Then connect to http://0.0.0.0:4000/jkan/ via a web browser.
 Read more about the [Architecture](https://github.com/timwis/jkan/wiki/Architecture) on the Wiki. 
 
 
-# Additional instructions 
-The active schema is _data/schemas/default.yml, with paths from the root, 'LIVEPEOPLE'. The active datasets are in _datasets. They can be edited directly or with any automated script. The script present is in resources/dataset_scripts/LPDataScript.py. It takes as input a csv or excel file with the relevant metadata. An example is resources/dataset_scripts/testLP.csv. The output of the script is stored in resources/dataset_scripts/output. The datasets that were already uploaded are in resources/uploaded-datasets. This script has been integrated into the data preparation pipeline. 
+# Metadata generation instruction
+
+
+Custom scripts are located in the [resources](resources) folder.
+
+Mugi's version is contained in the [resources/metadata_process_scripts](resources/metadata_process_scripts) directory.  
+The main workflow involves generating markdown files from an Excel file.  
+The directory has the following structure:
+```
+├── md_old                                              # Roy's version of markdowns
+│   ├── 2018-SU2-Trento-Accelerometer Event.md
+│   ├── 2018-SU2-Trento-Activities Per Time.md
+│   ├── ...
+├── sources                                             # Input/Output files
+│   ├── 2024-LivePeople_Metadata_Description-v2.xlsx    # Used for data completion
+│   ├── 2024_LivePeople PROJECT Metadata.xlsx           # Used for data completion
+│   ├── catalog.xlsx                                    # Metadata catalog
+│   └── list_of_datasets.csv                            # Dataset list
+├── generate_excel.py                                   # Generates Excel from old markdowns
+├── generate_markdowns.py                               # Generates markdowns from Excel
+├── generate_md_desc.py                                 # Generates metadata descriptions for the website
+├── get_dataset_list.py                                 # Generates dataset list for distribution
+├── modeling.py                                         # Maps old markdown structure to the new one
+```
+
+
+### How to Use
+
+To generate metadata for future use, follow these steps:
+
+1.  Add the new catalog to [catalog.xlsx](resources/metadata_process_scripts/sources/catalog.xlsx).
+    
+2. Run [generate_markdowns.py](resources/metadata_process_scripts/generate_markdowns.py) to generate the markdown files (they will be saved in the [_datasets](/Users/munkhdelger/Knowdive/LivePeople/_datasets) folder).
+    
+3.  Run [get_dataset_list.py](resources/metadata_process_scripts/get_dataset_list.py) to generate the [list_of_datasets.csv](resources/metadata_process_scripts/sources/list_of_datasets.csv) file, which is used for data download requests.
+    
+
+**Note:**  
+If you encounter any issues, the older version of the markdowns and scripts is still available in the repository.
+

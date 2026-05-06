@@ -36,7 +36,7 @@ resources:
     url: https://drive.google.com/file/d/1TMrjkAEWRZ5xhETJKOCnERgh_Z06PO2E/view?usp=drive_link
     format: PDF
   - name: Dataset paper and data collection methodology
-    url: https://arxiv.org/abs/2502.03347
+    url: https://dl.acm.org/doi/pdf/10.1145/3712289
     format: PDF
 duration_facet: "2-6 months"
 location_facet: United Kingdom

@@ -30,7 +30,7 @@ def encode_url(title):
     return urllib.parse.quote(title)
 
 
-def create_href(title):
+def create_href(title) -> str:
     base_url = "https://datascientiafoundation.github.io/LivePeople/datasets/"
     link = base_url + encode_url(title)
     return f'<a href="{link}" target="_blank">{title}</a>'
@@ -85,7 +85,7 @@ def generate_html_href(category, row, all_df):
     return ', '.join(generated_href)
 
 
-def create_project_md(df, all_df):
+def create_project_md(df, all_df, output_dir):
     cnt = 0
     df = df.fillna('')
     df['ds:prjOverallParticipantsInvolved'] = pd.to_numeric(df['ds:prjOverallParticipantsInvolved'],
@@ -173,7 +173,7 @@ def create_project_md(df, all_df):
     print(f'total proj generated: {cnt}')
 
 
-def create_dataset_md(df, all_df):
+def create_dataset_md(df, all_df, output_dir):
     # df = df.fillna('')
     cnt = 0
     skipped = 0
@@ -370,8 +370,7 @@ def create_dataset_md(df, all_df):
 
             # for viz
             if str(row['ds:DatCategoryFacet']) == "Dataset Bundle":
-                md_content = md_content + "component_dataset_link: " + generate_html_href('Dataset Bundle', row,
-                                                                                          all_df) + "\n"
+                md_content = md_content + "component_dataset_link: " + generate_html_href('Dataset Bundle', row, all_df) + "\n"
 
             md_content = md_content + "---\n"
 
@@ -386,27 +385,23 @@ def create_dataset_md(df, all_df):
     print(f'total # generated md: {cnt}, with skipped: {skipped}')
 
 
-def main(excel_path, output_dir):
+def main(excel_path, output_dir) -> None:
     # step 1. get fields to generate project/dataset/dataset bundle
     # step 2. convertion on the existing to new
     # step 3. dynamic functions
     # step 4. facet creation
 
-    # read by default 1st sheet of an excel file
-    all_sheets = pd.read_excel(excel_path, sheet_name=None)  # None reads all sheets
-    # df = pd.concat(all_sheets.values(), ignore_index=True)
+    # read all sheets in exel
+    all_sheets = pd.read_excel(excel_path, sheet_name=None)
 
     # Ensure output directory exists
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # project
     try:
-        create_project_md(all_sheets['Project'], all_sheets)
-
-        create_dataset_md(all_sheets['Dataset'], all_sheets)
-        #
-        create_dataset_md(all_sheets['Dataset Bundle'], all_sheets)
+        create_project_md(all_sheets['Project'], all_sheets, output_dir)
+        create_dataset_md(all_sheets['Dataset'], all_sheets, output_dir)
+        create_dataset_md(all_sheets['Dataset Bundle'], all_sheets, output_dir)
     except Exception as ex:
         print(ex)
 
@@ -414,11 +409,5 @@ def main(excel_path, output_dir):
 
 
 if __name__ == "__main__":
-    # Folder containing the Markdown files
-    excel_path = "/Users/munkhdelger/Knowdive/LivePeople/resources/metadata_process_scripts/sources/catalog.xlsx"
-
-    # Output path
-    output_dir = "/Users/munkhdelger/Knowdive/LivePeople/_datasets"
-    # output_dir = "/Users/munkhdelger/Knowdive/LivePeople/resources/metadata_process_scripts/md_new"
-
-    main(excel_path, output_dir)
+    main(excel_path = "./sources/2026-LivePeople_Metadata-v2.xlsx",
+         output_dir = "../../_datasets")
